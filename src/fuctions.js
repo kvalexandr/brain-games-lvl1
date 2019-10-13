@@ -7,3 +7,15 @@ export const getRandomOperation = () => {
   const operation = ['sum', 'dif', 'multi'];
   return operation[getRandomNum(1, 3)];
 };
+
+export const nod = (n1, n2) => {
+  const iter = (a1, a2) => {
+    const max = a1 > a2 ? a1 : a2;
+    const min = a1 < a2 ? a1 : a2;
+    const ost = max % min;
+    if (ost === 0) return min;
+    return iter(min, ost);
+  };
+
+  return iter(n1, n2);
+};
