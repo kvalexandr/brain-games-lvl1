@@ -2,3 +2,23 @@
 
 
 # Brain games
+
+## brain-even
+
+Пример установки пакета <a href="https://asciinema.org/a/9gEl0vQC13eVMgoYVE4qTXTuB">здесь</a>
+После уставновки запуск игры по команде brain-even
+
+## brain-calc
+
+Пример установки пакета <a href="https://asciinema.org/a/9gEl0vQC13eVMgoYVE4qTXTuB">здесь</a>
+После уставновки запуск игры по команде brain-calc
+
+## brain-gcd
+
+Пример установки пакета <a href="https://asciinema.org/a/9gEl0vQC13eVMgoYVE4qTXTuB">здесь</a>
+После уставновки запуск игры по команде brain-gcd
+
+## brain-progression
+
+Пример установки пакета <a href="https://asciinema.org/a/9gEl0vQC13eVMgoYVE4qTXTuB">здесь</a>
+После уставновки запуск игры по команде brain-progression
