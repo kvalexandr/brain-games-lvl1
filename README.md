@@ -22,3 +22,8 @@
 
 Пример установки пакета <a href="https://asciinema.org/a/9gEl0vQC13eVMgoYVE4qTXTuB">здесь</a>
 После уставновки запуск игры по команде brain-progression
+
+## brain-prime
+
+Пример установки пакета <a href="https://asciinema.org/a/9gEl0vQC13eVMgoYVE4qTXTuB">здесь</a>
+После уставновки запуск игры по команде brain-prime

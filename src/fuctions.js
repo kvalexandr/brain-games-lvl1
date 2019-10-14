@@ -19,3 +19,15 @@ export const nod = (n1, n2) => {
 
   return iter(n1, n2);
 };
+
+export const simple = (n) => {
+  let res = true;
+
+  if (n !== 1) {
+    for (let i = 2; i <= n; i += 1) {
+      if (n % i === 0 && i < n) res = false;
+    }
+  }
+
+  return res;
+};
