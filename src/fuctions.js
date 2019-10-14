@@ -1,11 +1,17 @@
+import { cons } from '@hexlet/pairs';
+
 export const getRandomNum = (min, max) => {
   const num = Math.floor(Math.random() * (max - min + 1)) + min;
   return num;
 };
 
-export const getRandomOperation = () => {
-  const operation = ['sum', 'dif', 'multi'];
-  return operation[getRandomNum(1, 3)];
+export const getRandomFunctionOperation = () => {
+  const sumNumber = (x, y) => cons(x + y, `${x} + ${y}`);
+  const difNumber = (x, y) => cons(x - y, `${x} - ${y}`);
+  const multiNumber = (x, y) => cons(x * y, `${x} * ${y}`);
+
+  const operation = [sumNumber, difNumber, multiNumber];
+  return operation[getRandomNum(0, 2)];
 };
 
 export const getNod = (n1, n2) => {
