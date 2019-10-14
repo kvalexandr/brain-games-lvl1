@@ -27,10 +27,9 @@ export const getNod = (n1, n2) => {
 };
 
 export const isSimple = (n) => {
-  if (n !== 1) {
-    for (let i = 2; i <= n; i += 1) {
-      if (n % i === 0 && i < n) return false;
-    }
+  if (n === 1) return false;
+  for (let i = 2; i <= n; i += 1) {
+    if (n % i === 0 && i < n) return false;
   }
 
   return true;

@@ -3,27 +3,35 @@
 
 # Brain games
 
-## brain-even
+## Brain even
 
-Пример установки пакета <a href="https://asciinema.org/a/9gEl0vQC13eVMgoYVE4qTXTuB">здесь</a>
-После уставновки запуск игры по команде brain-even
+Answer "yes" if the number is even, otherwise answer "no".
+[![asciicast](https://asciinema.org/a/iPifHVELTM1eRggSzMR7qmyhY.svg)](https://asciinema.org/a/iPifHVELTM1eRggSzMR7qmyhY)
 
-## brain-calc
+***
 
-Пример установки пакета <a href="https://asciinema.org/a/9gEl0vQC13eVMgoYVE4qTXTuB">здесь</a>
-После уставновки запуск игры по команде brain-calc
+## Brain calc
 
-## brain-gcd
+What is the result of the expression?
+[![asciicast](https://asciinema.org/a/hYQqsC8DSz74TvRKDM06mNj8N.svg)](https://asciinema.org/a/hYQqsC8DSz74TvRKDM06mNj8N)
 
-Пример установки пакета <a href="https://asciinema.org/a/9gEl0vQC13eVMgoYVE4qTXTuB">здесь</a>
-После уставновки запуск игры по команде brain-gcd
+***
 
-## brain-progression
+## Brain gcd
 
-Пример установки пакета <a href="https://asciinema.org/a/9gEl0vQC13eVMgoYVE4qTXTuB">здесь</a>
-После уставновки запуск игры по команде brain-progression
+Find the greatest common divisor of given numbers.
+[![asciicast](https://asciinema.org/a/CX1djUB39Rwvxa3eRQdTINRQ7.svg)](https://asciinema.org/a/CX1djUB39Rwvxa3eRQdTINRQ7)
 
-## brain-prime
+***
 
-Пример установки пакета <a href="https://asciinema.org/a/9gEl0vQC13eVMgoYVE4qTXTuB">здесь</a>
-После уставновки запуск игры по команде brain-prime
+## Brain progression
+
+What number is missing in the progression?
+[![asciicast](https://asciinema.org/a/TqTJnbm4trLRHJga70t8sBwCZ.svg)](https://asciinema.org/a/TqTJnbm4trLRHJga70t8sBwCZ)
+
+***
+
+## Brain prime
+
+Answer "yes" if given number is prime. Otherwise answer "no".
+[![asciicast](https://asciinema.org/a/D7OHHpQmq15Yo2sIc8fKPI3VA.svg)](https://asciinema.org/a/D7OHHpQmq15Yo2sIc8fKPI3VA)
