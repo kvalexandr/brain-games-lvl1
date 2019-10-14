@@ -1,5 +1,5 @@
 {
-  "name": "brain-games",
+  "name": "brain-games-kav",
   "version": "1.3.0",
   "description": "Brain games",
   "keywords": [
@@ -31,7 +31,7 @@
     "type": "git",
     "url": "git+https://github.com/kvalexandr/frontend-project-lvl1.git"
   },
-  "author": "",
+  "author": "Alexandr Kudryavtsev",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/kvalexandr/frontend-project-lvl1/issues"
