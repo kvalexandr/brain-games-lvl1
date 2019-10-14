@@ -8,19 +8,22 @@ export const generateQuestion = () => {
   const num2 = func.getRandomNum(1, 100);
   const operation = func.getRandomOperation();
 
+  let question = '';
+  let answer = '';
+
   if (operation === 'dif') {
-    const question = `${num1} - ${num2}`;
-    const answer = String(num1 - num2);
-    return cons(question, answer);
+    question = `${num1} - ${num2}`;
+    answer = String(num1 - num2);
   }
 
   if (operation === 'multi') {
-    const question = `${num1} * ${num2}`;
-    const answer = String(num1 * num2);
-    return cons(question, answer);
+    question = `${num1} * ${num2}`;
+    answer = String(num1 * num2);
   }
 
-  const question = `${num1} + ${num2}`;
-  const answer = String(num1 + num2);
+  if (operation === 'sum') {
+    question = `${num1} + ${num2}`;
+    answer = String(num1 + num2);
+  }
   return cons(question, answer);
 };
