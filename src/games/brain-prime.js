@@ -7,7 +7,7 @@ export const rules = 'Answer "yes" if given number is prime. Otherwise answer "n
 export const generateQuestion = () => {
   const num = func.getRandomNum(1, 100);
   const question = `${num}`;
-  const answer = func.simple(num) ? 'yes' : 'no';
+  const answer = func.isSimple(num) ? 'yes' : 'no';
 
   return cons(question, answer);
 };

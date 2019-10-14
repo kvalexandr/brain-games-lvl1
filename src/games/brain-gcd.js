@@ -9,6 +9,6 @@ export const generateQuestion = () => {
   const num2 = func.getRandomNum(1, 100);
 
   const question = `${num1} ${num2}`;
-  const answer = String(func.nod(num1, num2));
+  const answer = String(func.getNod(num1, num2));
   return cons(question, answer);
 };
