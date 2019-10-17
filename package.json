@@ -1,6 +1,6 @@
 {
   "name": "brain-games-kav",
-  "version": "1.4.0",
+  "version": "1.4.1",
   "description": "Brain games",
   "keywords": [
     "brain",
@@ -11,7 +11,7 @@
     "progression",
     "prime"
   ],
-  "main": "index.js",
+  "main": "",
   "files": [
     "dist"
   ],

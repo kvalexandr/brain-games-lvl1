@@ -1,14 +1,19 @@
 
 import { cons } from '@hexlet/pairs';
-import * as func from '../fuctions';
+import engine from '..';
 
-export const rules = 'What number is missing in the progression?\n';
+const getRandomNum = (min, max) => {
+  const num = Math.floor(Math.random() * (max - min + 1)) + min;
+  return num;
+};
 
-export const generateQuestion = () => {
-  const start = func.getRandomNum(1, 100);
-  const step = func.getRandomNum(2, 10);
+const rulesText = 'What number is missing in the progression?\n';
+
+const generateQuestionAnswer = () => {
+  const start = getRandomNum(1, 100);
+  const step = getRandomNum(2, 10);
   const count = 10;
-  const dot = func.getRandomNum(1, count);
+  const dot = getRandomNum(1, count);
   let res = '';
   let num = '';
   let dotNum = null;
@@ -24,7 +29,11 @@ export const generateQuestion = () => {
     }
   }
 
-  const question = `${res}`;
+  const question = res;
   const answer = String(dotNum);
   return cons(question, answer);
 };
+
+const start = () => engine(rulesText, generateQuestionAnswer);
+
+export default start;

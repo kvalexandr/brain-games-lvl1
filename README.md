@@ -1,4 +1,4 @@
-<img src="https://api.codeclimate.com/v1/badges/a99a88d28ad37a79dbf6/maintainability" /> <img src="https://api.codeclimate.com/v1/badges/a99a88d28ad37a79dbf6/test_coverage" /> <img src="https://travis-ci.com/kvalexandr/frontend-project-lvl1.svg?branch=master" />
+[![Maintainability](https://api.codeclimate.com/v1/badges/14225a60fac6592d3269/maintainability)](https://codeclimate.com/github/kvalexandr/frontend-project-lvl1/maintainability) [![Test Coverage](https://api.codeclimate.com/v1/badges/14225a60fac6592d3269/test_coverage)](https://codeclimate.com/github/kvalexandr/frontend-project-lvl1/test_coverage) [![Build Status](https://travis-ci.com/kvalexandr/brain-games-lvl1.svg?branch=master)](https://travis-ci.com/kvalexandr/brain-games-lvl1)
 
 
 # Brain games
@@ -6,6 +6,7 @@
 ## Brain even
 
 Answer "yes" if the number is even, otherwise answer "no".
+
 [![asciicast](https://asciinema.org/a/iPifHVELTM1eRggSzMR7qmyhY.svg)](https://asciinema.org/a/iPifHVELTM1eRggSzMR7qmyhY)
 
 ***
@@ -13,6 +14,7 @@ Answer "yes" if the number is even, otherwise answer "no".
 ## Brain calc
 
 What is the result of the expression?
+
 [![asciicast](https://asciinema.org/a/hYQqsC8DSz74TvRKDM06mNj8N.svg)](https://asciinema.org/a/hYQqsC8DSz74TvRKDM06mNj8N)
 
 ***
@@ -20,6 +22,7 @@ What is the result of the expression?
 ## Brain gcd
 
 Find the greatest common divisor of given numbers.
+
 [![asciicast](https://asciinema.org/a/CX1djUB39Rwvxa3eRQdTINRQ7.svg)](https://asciinema.org/a/CX1djUB39Rwvxa3eRQdTINRQ7)
 
 ***
@@ -27,6 +30,7 @@ Find the greatest common divisor of given numbers.
 ## Brain progression
 
 What number is missing in the progression?
+
 [![asciicast](https://asciinema.org/a/TqTJnbm4trLRHJga70t8sBwCZ.svg)](https://asciinema.org/a/TqTJnbm4trLRHJga70t8sBwCZ)
 
 ***
@@ -34,4 +38,5 @@ What number is missing in the progression?
 ## Brain prime
 
 Answer "yes" if given number is prime. Otherwise answer "no".
+
 [![asciicast](https://asciinema.org/a/D7OHHpQmq15Yo2sIc8fKPI3VA.svg)](https://asciinema.org/a/D7OHHpQmq15Yo2sIc8fKPI3VA)
