@@ -1,10 +1,6 @@
 import { cons, cdr, car } from '@hexlet/pairs';
+import * as helper from '../helpers';
 import engine from '..';
-
-const getRandomNum = (min, max) => {
-  const num = Math.floor(Math.random() * (max - min + 1)) + min;
-  return num;
-};
 
 const getRandomFunctionOperation = () => {
   const sumNumber = (x, y) => cons(x + y, `${x} + ${y}`);
@@ -12,14 +8,14 @@ const getRandomFunctionOperation = () => {
   const multiNumber = (x, y) => cons(x * y, `${x} * ${y}`);
 
   const operation = [sumNumber, difNumber, multiNumber];
-  return operation[getRandomNum(0, 2)];
+  return operation[helper.getRandomNum(0, 2)];
 };
 
-const rulesText = 'What is the result of the expression?\n';
+const descriptionGame = 'What is the result of the expression?';
 
 const generateQuestionAnswer = () => {
-  const num1 = getRandomNum(1, 100);
-  const num2 = getRandomNum(1, 100);
+  const num1 = helper.getRandomNum(1, 100);
+  const num2 = helper.getRandomNum(1, 100);
   const operationRandom = getRandomFunctionOperation();
 
   const question = cdr(operationRandom(num1, num2));
@@ -27,6 +23,6 @@ const generateQuestionAnswer = () => {
   return cons(question, answer);
 };
 
-const start = () => engine(rulesText, generateQuestionAnswer);
+const start = () => engine(descriptionGame, generateQuestionAnswer);
 
 export default start;

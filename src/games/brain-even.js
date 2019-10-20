@@ -1,23 +1,18 @@
 import { cons } from '@hexlet/pairs';
+import * as helper from '../helpers';
 import engine from '..';
-
-const getRandomNum = (min, max) => {
-  const num = Math.floor(Math.random() * (max - min + 1)) + min;
-  return num;
-};
 
 const isEven = (num) => num % 2 === 0;
 
-const rulesText = 'Answer "yes" if the number is even, otherwise answer "no".\n';
+const descriptionGame = 'Answer "yes" if the number is even, otherwise answer "no".';
 
 const generateQuestionAnswer = () => {
-  const num = getRandomNum(1, 100);
-  const question = num;
-  const answer = isEven(num) ? 'yes' : 'no';
+  const question = helper.getRandomNum(1, 100);
+  const answer = isEven(question) ? 'yes' : 'no';
 
   return cons(question, answer);
 };
 
-const start = () => engine(rulesText, generateQuestionAnswer);
+const start = () => engine(descriptionGame, generateQuestionAnswer);
 
 export default start;
