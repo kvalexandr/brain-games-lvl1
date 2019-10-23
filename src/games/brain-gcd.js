@@ -1,6 +1,5 @@
-
 import { cons } from '@hexlet/pairs';
-import * as helper from '../helpers';
+import getRandomNum from '../helpers';
 import engine from '..';
 
 const getGreatestCommonDivisor = (n1, n2) => {
@@ -19,14 +18,12 @@ const getGreatestCommonDivisor = (n1, n2) => {
 const descriptionGame = 'Find the greatest common divisor of given numbers.';
 
 const generateQuestionAnswer = () => {
-  const number1 = helper.getRandomNum(1, 100);
-  const number2 = helper.getRandomNum(1, 100);
+  const number1 = getRandomNum(1, 100);
+  const number2 = getRandomNum(1, 100);
 
   const question = `${number1} ${number2}`;
   const answer = String(getGreatestCommonDivisor(number1, number2));
   return cons(question, answer);
 };
 
-const start = () => engine(descriptionGame, generateQuestionAnswer);
-
-export default start;
+export default () => engine(descriptionGame, generateQuestionAnswer);

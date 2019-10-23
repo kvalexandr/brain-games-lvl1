@@ -21,13 +21,14 @@ const engine = (descriptionGame, generateQuestionAnswer) => {
 
     if (answerUser === answer) {
       console.log('Correct!');
-      if (i === questionsCount - 1) console.log(`Congratulations, ${userName}!`);
     } else {
       console.log(`${answerUser} is wrong answer ;(. Correct answer was ${answer}.`);
       console.log(`Let's try again, ${userName}!`);
-      break;
+      return false;
     }
   }
+  console.log(`Congratulations, ${userName}!`);
+  return true;
 };
 
 export default engine;

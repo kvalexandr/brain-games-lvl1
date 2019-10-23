@@ -1,27 +1,21 @@
-
 import { cons } from '@hexlet/pairs';
-import * as helper from '../helpers';
+import getRandomNum from '../helpers';
 import engine from '..';
 
 const descriptionGame = 'What number is missing in the progression?';
+const lengthProgression = 10;
 
 const generateQuestionAnswer = () => {
-  const step = helper.getRandomNum(2, 10);
-  const lengthProgression = 10;
-  const randomPositionDot = helper.getRandomNum(1, lengthProgression);
-  let numberCurrentPosition = helper.getRandomNum(1, 100);
+  const step = getRandomNum(2, 10);
+  const start = getRandomNum(1, 100);
+  const randomPositionDot = getRandomNum(1, lengthProgression);
+  const numberInsteadOfDot = start + (randomPositionDot - 1) * step;
+  let numberCurrentPosition = start;
   let resultProgression = '';
-  let numberInsteadOfDot = null;
 
   for (let i = 1; i <= lengthProgression; i += 1) {
     if (i > 1) numberCurrentPosition += step;
-
-    if (i === randomPositionDot) {
-      resultProgression += '.. ';
-      numberInsteadOfDot = numberCurrentPosition;
-    } else {
-      resultProgression += `${numberCurrentPosition} `;
-    }
+    resultProgression = numberCurrentPosition === numberInsteadOfDot ? `${resultProgression} ..` : `${resultProgression} ${numberCurrentPosition}`;
   }
 
   const question = resultProgression;
@@ -29,6 +23,4 @@ const generateQuestionAnswer = () => {
   return cons(question, answer);
 };
 
-const start = () => engine(descriptionGame, generateQuestionAnswer);
-
-export default start;
+export default () => engine(descriptionGame, generateQuestionAnswer);
