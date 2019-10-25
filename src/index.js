@@ -24,11 +24,10 @@ const engine = (descriptionGame, generateQuestionAnswer) => {
     } else {
       console.log(`${answerUser} is wrong answer ;(. Correct answer was ${answer}.`);
       console.log(`Let's try again, ${userName}!`);
-      return false;
+      return;
     }
   }
   console.log(`Congratulations, ${userName}!`);
-  return true;
 };
 
 export default engine;

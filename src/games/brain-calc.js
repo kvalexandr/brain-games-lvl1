@@ -3,12 +3,14 @@ import getRandomNum from '../helpers';
 import engine from '..';
 
 const getRandomFunctionOperation = () => {
-  const sumNumber = (x, y) => cons(x + y, `${x} + ${y}`);
-  const difNumber = (x, y) => cons(x - y, `${x} - ${y}`);
-  const multiNumber = (x, y) => cons(x * y, `${x} * ${y}`);
+  const typeOperation = ['+', '-', '*'];
+  const randomOperation = typeOperation[getRandomNum(0, typeOperation.length - 1)];
+  let func;
+  if (randomOperation === '+') func = (x, y) => x + y;
+  if (randomOperation === '-') func = (x, y) => x - y;
+  if (randomOperation === '*') func = (x, y) => x * y;
 
-  const operation = [sumNumber, difNumber, multiNumber];
-  return operation[getRandomNum(0, operation.length - 1)];
+  return (x, y) => cons(func(x, y), `${x} ${randomOperation} ${y}`);
 };
 
 const descriptionGame = 'What is the result of the expression?';
