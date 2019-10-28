@@ -1,16 +1,17 @@
-import { cons, cdr, car } from '@hexlet/pairs';
+import { cons } from '@hexlet/pairs';
 import getRandomNum from '../helpers';
 import engine from '..';
 
-const getRandomFunctionOperation = () => {
-  const typeOperation = ['+', '-', '*'];
-  const randomOperation = typeOperation[getRandomNum(0, typeOperation.length - 1)];
-  let func;
-  if (randomOperation === '+') func = (x, y) => x + y;
-  if (randomOperation === '-') func = (x, y) => x - y;
-  if (randomOperation === '*') func = (x, y) => x * y;
-
-  return (x, y) => cons(func(x, y), `${x} ${randomOperation} ${y}`);
+const getResultOperation = (x, y, randomOperation) => {
+  switch (randomOperation) {
+    case '+':
+    default:
+      return x + y;
+    case '-':
+      return x - y;
+    case '*':
+      return x * y;
+  }
 };
 
 const descriptionGame = 'What is the result of the expression?';
@@ -18,10 +19,12 @@ const descriptionGame = 'What is the result of the expression?';
 const generateQuestionAnswer = () => {
   const num1 = getRandomNum(1, 100);
   const num2 = getRandomNum(1, 100);
-  const operationRandom = getRandomFunctionOperation();
 
-  const question = cdr(operationRandom(num1, num2));
-  const answer = String(car(operationRandom(num1, num2)));
+  const operations = ['+', '-', '*'];
+  const randomOperation = operations[getRandomNum(0, operations.length - 1)];
+
+  const question = `${num1} ${randomOperation} ${num2}`;
+  const answer = String(getResultOperation(num1, num2, randomOperation));
   return cons(question, answer);
 };
 

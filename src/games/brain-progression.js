@@ -3,21 +3,21 @@ import getRandomNum from '../helpers';
 import engine from '..';
 
 const descriptionGame = 'What number is missing in the progression?';
-const lengthProgression = 9;
+const lengthProgression = 10;
 
 const generateQuestionAnswer = () => {
-  const stepProgression = getRandomNum(2, 10);
-  const startProgression = getRandomNum(1, 100);
-  const hiddenElementPosition = getRandomNum(0, lengthProgression);
-  const answer = startProgression + hiddenElementPosition * stepProgression;
+  const step = getRandomNum(2, 10);
+  const start = getRandomNum(1, 100);
+  const hiddenElementPosition = getRandomNum(0, lengthProgression - 1);
+  const answer = start + hiddenElementPosition * step;
   let question = '';
-  let currentElementInProgression = 0;
+  let currentElement = 0;
 
-  for (let i = 0; i <= lengthProgression; i += 1) {
-    if (currentElementInProgression === 0) currentElementInProgression = startProgression;
-    else currentElementInProgression += stepProgression;
+  for (let i = 0; i < lengthProgression; i += 1) {
+    if (currentElement === 0) currentElement = start;
+    else currentElement += step;
 
-    question = currentElementInProgression === answer ? `${question} ..` : `${question} ${currentElementInProgression}`;
+    question = currentElement === answer ? `${question} ..` : `${question} ${currentElement}`;
   }
 
   return cons(question, String(answer));
